@@ -1,18 +1,144 @@
-\documentclass{uoflthesis}
+\documentclass[draft]{uoflthesis} %Use the option [12pt] to change font size. The [draft] option is also available.
+
+%Uncomment the next line for times font. You may also use  Arial, Courier, or other "standard font".
+%\usepackage{times,mathptmx}
 
 \usepackage{lipsum} %only for dummy text - it can be removed from actual thesis
 
+%\usepackage[showframe]{geometry}
+
 \title{The most prevalent form of enlightenment}
-\author{John Henry Stewart\\B.A., Seton Hall, 1996\\M.A., Louisiana State University, 1998}
+\author{John Henry Stewart}
+\authortitles{B.A., Seton Hall, 1996\\M.A., Louisiana State University, 1998}
 \type{dissertation} %may also be thesis
-\graddate{August 2022} %month may only be December, May, or August
+\gradyear{2022}
+\gradmonth{august} %may only be December, May, or August
 \unit{College of Arts and Sciences}
 \degree{Doctor of Philosophy}
 \major{Mathematics}
 \department{Department of Mathematics}
+\defensedate{April 22, 2002}
 
 \begin{document}
 
+\frontmatter
+
 \maketitle
+
+%Copyright page is optional
+\copyrightpage
+
+\signaturepage{Thesis or Dissertation Director\\Name}{Thesis or Dissertation Co-Director or Second Committee Member Name}{Third Committee Member Name}{Fourth Committee Member Name}{Fifth Committee Member Name}
+
+%Dedication and Acknowledgment are optional, but if they are present, they must be in the front matter.
+\section*{Dedication}
+\addcontentsline{toc}{section}{Dedication}
+\begin{center}
+This thesis or dissertation is dedicated to my parents
+
+Mr.~Appurajapuram Krishnamurthy Sethuraman
+
+and
+
+Mrs.~Nagalakshmi Sethuraman
+
+who have given me invaluable educational opportunities.
+\end{center}
+
+\section*{Acknowledgment}
+\addcontentsline{toc}{section}{Acknowledgment}
+
+I would like to thank my major professor, Dr.~Jack Watson, for his guidance and
+patience. I would also like to thank the other committee members, Dr.~Joe Perona and
+Dr.~Fred Weber, for their comments and assistance over the past four years. I would also
+like to express my thanks to my wife, Amy, for her understanding and patience during
+those times when there was no light at the end of anything. She encouraged me and made
+me stick with it. Also, many thanks to the members of my family in Savannah, Georgia:
+Paul and Jeanenne Adams, Jim and Catherine Shippy, and the late Eleanor and Fred Catti.
+Finally, I would like to thank the members of my family in Knoxville, Tennessee, Andy
+and Ruth Thomason.
+
+\begin{abstract}
+\addcontentsline{toc}{section}{Abstract}
+\lipsum
+\end{abstract}
+
+\tableofcontents
+
+%Only if you have 5 or more tables
+%\listoftables
+
+%Only if you have 5 or more figures
+\listoffigures
+
+\mainmatter
+
+\chapter{First}
+
+\section{One}
+
+\lipsum[1-50]
+
+\section{Two}
+
+\lipsum
+
+\section{Three}
+
+\lipsum
+
+\section{Four}
+
+\lipsum
+
+\section{Five}
+
+\lipsum
+
+\chapter{Second}
+
+\section{O}
+
+\lipsum
+
+\section{T}
+
+\lipsum
+
+\section{T}
+
+\lipsum
+
+\section{F}
+
+\lipsum
+
+\section{F}
+
+\lipsum
+
+\chapter{Third}
+
+\section{A}
+
+\lipsum
+
+\section{B}
+
+\lipsum
+
+\section{C}
+
+\lipsum
+
+\chapter{Fourth}
+
+\section{Uno}
+
+\lipsum
+
+\section{Dos}
+
+\lipsum[1-150]
 
 \end{document}
