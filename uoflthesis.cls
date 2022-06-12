@@ -6,8 +6,8 @@
 \ProcessOptions\relax
 \LoadClass[oneside]{book}
 
-\RequirePackage{setspace,comment,fancyhdr}
-\RequirePackage{titlesec}
+\RequirePackage{setspace,comment,fancyhdr,titlesec}
+\RequirePackage[nottoc]{tocbibind}
 
 \setlength{\hoffset}{0in}
 \setlength{\oddsidemargin}{0.5in}
@@ -26,9 +26,13 @@
 
 \doublespacing
 
+\newcommand{\chapterbreak}{\clearpage\vspace*{0in}}
+\titleformat{\chapter}[display]{\centering\Large}{\Large\MakeUppercase{\chaptertitlename} \thechapter}{0em}{\MakeUppercase}
+\titlespacing{\chapter}{0pt}{0.75in}{*3} %The 0.75in is a hack to get rid of the extra 0.25in LaTeX inserts.
+
 \newcommand{\sectionbreak}{\clearpage\vspace*{0in}}
-\titleformat{\section}{\centering\large}{}{0pt}{}{}
-\titlespacing{\section}{0pt}{0.75in}{*3}%The 0.75in is a hack to get rid of the extra 0.25in LaTeX inserts.
+\titleformat{\section}{\centering\large}{\thesection.}{0.5em}{\MakeUppercase}
+\titlespacing{\section}{0pt}{0.75in}{*3} %The 0.75in is a hack to get rid of the extra 0.25in LaTeX inserts.
 
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\authortitles}[1]{\newcommand{\@authortitles}{#1}}
@@ -145,7 +149,14 @@ by the following \expandafter\MakeUppercase\@type\ Committee:
 }
 
 \newenvironment{abstract}{%
-\section*{Abstract\\ \@title\\ \@author \\ \@defensedate}
+\section*{Abstract}
+\begin{centering}
+\large
+\MakeUppercase{\@title}\\
+\@author\\
+\@defensedate\\
+\end{centering}
+
 }{%
 }
 

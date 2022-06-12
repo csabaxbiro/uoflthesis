@@ -1,11 +1,13 @@
-\documentclass[draft]{uoflthesis} %Use the option [12pt] to change font size. The [draft] option is also available.
+\documentclass{uoflthesis} %Use the option [12pt] to change font size. The [draft] option is also available.
 
 %Uncomment the next line for times font. You may also use  Arial, Courier, or other "standard font".
 %\usepackage{times,mathptmx}
 
 \usepackage{lipsum} %only for dummy text - it can be removed from actual thesis
 
-%\usepackage[showframe]{geometry}
+\usepackage{tikz} %only if you use it for your pictures
+
+\usepackage{array,makecell} %Only for Vita; you may not need it.
 
 \title{The most prevalent form of enlightenment}
 \author{John Henry Stewart}
@@ -101,7 +103,13 @@ and Ruth Thomason.
 
 \lipsum
 
-\section{T}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw (0,0) -- (1,1);
+\end{tikzpicture}
+\caption{Simple figure 1}
+\end{figure}
 
 \lipsum
 
@@ -109,6 +117,17 @@ and Ruth Thomason.
 
 \lipsum
 
+\section{T}
+
+\lipsum
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw (0,0) -- (1,1);
+\end{tikzpicture}
+\caption{Same simple figure}
+\end{figure}
 \section{F}
 
 \lipsum
@@ -131,14 +150,73 @@ and Ruth Thomason.
 
 \lipsum
 
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw (0,0) -- (1,1);
+\end{tikzpicture}
+\caption{Consecutive first}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\draw (0,0) -- (1,1);
+\end{tikzpicture}
+\caption{Consecutive second}
+\end{figure}
+
+\lipsum
+
 \chapter{Fourth}
 
 \section{Uno}
 
 \lipsum
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{uofl.png}
+\caption{Minerva}
+\end{figure}
+
+\lipsum
+
 \section{Dos}
 
 \lipsum[1-150]
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{thesis}
+
+\appendix
+
+\chapter{Hyperbolic geometry}
+
+\lipsum
+
+\chapter*{Curriculum Vita}
+\addcontentsline{toc}{chapter}{Curriculum Vita}
+
+\singlespacing
+\renewcommand{\arraystretch}{2}
+
+\begin{tabular}{ll}
+NAME: & Allan Robert Elstrom\\
+ADDRESS: & \makecell[lt]{Department of Medical Antiquities\\1115 S. Third St.\\University of Montreal\\Yosemite, KY 40292}\\
+DOB: & Pittsburgh, Pennsylvania --- May 19, 1951\\
+\makecell[lb]{EDUCATION \&\\ TRAINING:} & \makecell[lt]{B.S., Animal Science\\Indiana University of Pennsylvania\\1990--94}\\
+    &\makecell[lt]{M.Ed., Music Education\\Columbia University\\1994--95}\\
+    &\makecell[lt]{Ph.D., Meteorology\\University of California, Los Angeles\\1995--2002}\\
+AWARDS: & \makecell[lt]{Nobel Prize in Physiology or Medicine\\2002}\\
+    &\makecell[lt]{Golden Apple Teaching Award\\University of California, Los Angeles\\2001}\\
+\makecell[lb]{PROFESSIONAL\\SOCIETIES}\\
+PUBLICATIONS\\
+\makecell[lb]{NATIONAL MEETING\\PRESENTATIONS}\\
+REFEREED JOURNALS\\
+BOOKS AND SYMPOSIA\\
+INVITED PRESENTATIONS\\
+\end{tabular}
 
 \end{document}
