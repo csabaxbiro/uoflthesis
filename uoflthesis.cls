@@ -1,4 +1,3 @@
-%TODO: Landscape pages.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uoflthesis}[2022/06/10 University of Louisville Thesis Class]
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
@@ -49,7 +48,8 @@
 
 \renewcommand{\maketitle}{%
 \noindent\begin{minipage}{\textwidth}
-\centering\large\singlespacing
+\centering\singlespacing
+\fontsize{12}{12}\selectfont
 \vspace*{1in}
 \MakeUppercase{\@title}
 
@@ -93,6 +93,7 @@ Louisville, Kentucky
 \newcommand{\copyrightpage}{
 \newpage\noindent\begin{minipage}{\textwidth}
 \centering
+\fontsize{10}{12}\selectfont
 \vspace*{2in}
 Copyright \@gradyear\ by \@author
 
@@ -105,7 +106,8 @@ All rights reserved
 \newcommand{\signaturepage}[5]{%
 \newpage{\centering\ }\thispagestyle{empty}
 \newpage\setcounter{page}{2}\noindent\begin{minipage}{\textwidth}
-\singlespacing\centering\large
+\singlespacing\centering
+\fontsize{12}{12}\selectfont
 \vspace*{1in}
 \MakeUppercase{\@title}
 
