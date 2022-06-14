@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uoflthesis}[2022/06/10 University of Louisville Thesis Class]
+\ProvidesClass{uoflthesis}[2022/06/14 University of Louisville Thesis Class]
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
 \DeclareOption{draft}{\PassOptionsToClass{draft}{book}}
 \ProcessOptions\relax
