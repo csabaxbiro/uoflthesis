@@ -163,3 +163,5 @@ by the following \expandafter\MakeUppercase\@type\ Committee:
 }
 
 \renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\bibname}{References}
+
